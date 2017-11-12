@@ -1,0 +1,38 @@
+<div *ngIf="food">
+  <div class="ui center aligned blue inverted segment">{{food.result.name}}</div>
+  <div class="ui aligned segment">
+    <img class="ui centered circular image" src="{{food.result.pic}}">
+    <div class="ui right aligned basic segment">
+      <a routerLink='/food/method/{{food.result.id}}'>
+        <i class="food icon"></i> 制作步骤 </a>
+    </div>
+    <div class="ui relaxed divided list">
+      <div class="item">
+        <div class="content">
+          <div class="description"> 适合人数：{{food.result.peoplenum}}</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <div class="description"> 准备时间：{{food.result.preparetime}}</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <div class="description"> 制作时间：{{food.result.cookingtime}}</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <div class="description"> 类别：{{food.result.tag}}</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <div class="description"> 介绍：{{food.result.content}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

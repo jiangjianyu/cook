@@ -1,0 +1,25 @@
+<div class="ui center aligned blue inverted segment">食物制作</div>
+<div class="ui center basic segment">
+    <div class="ui card">
+        <div class="content">
+          <div class="header">食材和配料</div>
+        </div>
+        <div class="content">
+          <div class="ui small feed">
+            <div class="event">
+              <div class="content">
+                <div class="summary" *ngFor = 'let m of (food.result.material)'>{{m.mname}}：{{m.amount}} </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui divided items">
+          <div class="item" *ngFor = 'let p of (food.result.process);let i = index;'>
+            <div class="ui tiny image">
+              <img src="{{p.pic}}">
+            </div>
+            <div class="middle aligned content">{{i + 1}}、{{p.pcontent}}</div>
+          </div>
+        </div>
+</div>

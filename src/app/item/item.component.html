@@ -1,0 +1,12 @@
+<div class="ui center aligned blue inverted segment">菜品分类</div>
+
+<div class="ui basic segment">
+  <div class="ui grid">
+    <div class="ui huge labels">
+      <div class="ui label" [ngStyle]="{'color': getRandomColor()}" *ngFor="let item of responItem.result[6].list">
+        <a routerLink="/search/{{item.classid}}" >{{item.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

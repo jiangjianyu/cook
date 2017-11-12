@@ -1,0 +1,7 @@
+<div class="ui raised  blue inverted segment">
+  <div class="ui fluid icon input">
+    <input type="text" placeholder="搜索菜品" #box (keyup.enter)="onEnter(box.value)">
+      <i class="search icon"></i>
+  </div>
+</div>
+<app-food-list [dishes]="responDish.result.list" [q]='box.value' [id]='id'></app-food-list>

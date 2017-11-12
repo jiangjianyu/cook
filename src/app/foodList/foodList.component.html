@@ -1,0 +1,47 @@
+<div *ngIf='dishes'>
+  <div class="ui basic segment">
+    <div class="five column doubling ui grid">
+      <div class="column" *ngFor="let dish of dishes">
+        <div class="ui pink card">
+          <div class="image">
+            <img src="{{dish.pic}}">
+          </div>
+          <div class="content">
+            <a class="header" routerLink='/food/detail/{{dish.id}}'> {{ dish.name }}</a>
+            <div class="meta">
+              <span class="right floated date">
+                <i class="user icon"></i>{{dish.cookingtime}}
+              </span>
+            </div>
+            <div class="description">{{ dish.content | slice:0:25 }}……</div>
+          </div>
+          <div class="extra content">
+            <a routerLink='/food/method/{{dish.id}}'>
+              <i class="food icon"></i> 制作步骤 </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+<!-- 
+<div class="ui pink card">
+  <div class="image">
+    <img src="{{dish.pic}}">
+  </div>
+  <div class="content">
+    <a class="header"> {{ dish.name }}</a>
+    <div class="meta">
+      <span class="right floated date">
+        <i class="user icon"></i>{{dish.preparetime}}
+      </span>
+    </div>
+    <div class="description">{{ dish.content | slice:0:25 }}……</div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="food icon"></i> 详细做法 </a>
+  </div>
+</div> -->
