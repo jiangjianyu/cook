@@ -8,18 +8,22 @@
           <div class="ui small feed">
             <div class="event">
               <div class="content">
+                  <ng-container *ngIf="food">
                 <div class="summary" *ngFor = 'let m of (food.result.material)'>{{m.mname}}：{{m.amount}} </div>
+                  </ng-container>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="ui divided items">
+          <ng-container *ngIf="food">
           <div class="item" *ngFor = 'let p of (food.result.process);let i = index;'>
             <div class="ui tiny image">
               <img src="{{p.pic}}">
             </div>
             <div class="middle aligned content">{{i + 1}}、{{p.pcontent}}</div>
           </div>
+        </ng-container>
         </div>
 </div>

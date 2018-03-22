@@ -3,9 +3,11 @@
 <div class="ui basic segment">
   <div class="ui grid">
     <div class="ui huge labels">
+      <ng-container *ngIf="responItem">
       <div class="ui label" [ngStyle]="{'color': getRandomColor()}" *ngFor="let item of responItem.result[6].list">
         <a routerLink="/search/{{item.classid}}" >{{item.name}}</a>
       </div>
+    </ng-container>
     </div>
   </div>
 </div>
