@@ -1,7 +1,9 @@
 <div class="ui raised  blue inverted segment">
   <div class="ui fluid icon input">
+    <i class="search icon"></i>
     <input type="text" placeholder="搜索菜品" [(ngModel)]="q" (keyup)="onEnter()">
-      <i class="search icon"></i>
   </div>
 </div>
-<app-food-list [dishes]="responDish.result.list" [q]='box.value' [id]='id'></app-food-list>
+<ng-container *ngIf="responDish">
+  <app-food-list [dishes]="responDish.result.list" [q]='q' [id]='id'></app-food-list>
+</ng-container>

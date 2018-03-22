@@ -1,2 +1,4 @@
 <div class="ui center aligned blue inverted segment">每日推荐</div>
+<ng-container *ngIf="responDish">
 <app-food-list [dishes]="responDish.result.list"></app-food-list>
+</ng-container>
