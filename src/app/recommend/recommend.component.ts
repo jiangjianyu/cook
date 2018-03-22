@@ -14,7 +14,6 @@ export class RecommendComponent implements OnInit {
 
   ngOnInit() {
     this.foodService.getNiceFood().subscribe(result => this.responDish = result);
-    
   }
 
 }

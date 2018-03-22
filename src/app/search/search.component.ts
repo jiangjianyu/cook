@@ -12,19 +12,17 @@ import { FoodService } from '../service/food.service';
 export class SearchComponent implements OnInit {
 
   responDish: ResponDish;
-  q:string;
-  id:string;
+  q: string;
+  id: string;
 
   constructor(private foodService: FoodService, private route: ActivatedRoute, private location: Location) { }
 
-  onEnter(q: string) {
-    this.q = q;
-    this.foodService.getFoodListByKey(q,0).subscribe(result => this.responDish = result);
-  };
+  onEnter() {
+    this.foodService.getFoodListByKey(this.q, 0).subscribe(result => this.responDish = result);
+  }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
-    this.foodService.getFoodListByCid(this.id,0).subscribe(result => this.responDish = result);
+    this.foodService.getFoodListByCid(this.id, 0).subscribe(result => this.responDish = result);
   }
- 
 }

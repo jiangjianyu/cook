@@ -1,6 +1,7 @@
 <div *ngIf='dishes'>
   <div class="ui basic segment">
     <div class="five column doubling ui grid">
+      <ng-container *ngIf="dishes">
       <div class="column" *ngFor="let dish of dishes">
         <div class="ui pink card">
           <div class="image">
@@ -21,6 +22,7 @@
           </div>
         </div>
       </div>
+    </ng-container>
     </div>
   </div>
 </div>
